@@ -7,6 +7,12 @@
 
 ##### 操作步骤
 
+- 首先配置windbg的符号表
+
+  首先打开windbg，`File - symbol file path`,配置内容为 `.sympath cache*c:\MySymbols;srv*https://msdl.microsoft.com/download/symbols`，勾选reload框，保存。
+
+  然后在命令行输入指令`.load /f /i` ，强制加载符号表。
+
 - 首先在虚拟机中打开windbg，然后在windbg中 `File - Open Execuatble` ，打开calc.exe
 
 - 新建一个文本文件,,命名为`1.txt`，并存入以下内容
@@ -41,6 +47,8 @@
 - 直接使用一串指令不行
 
   修改成脚本
+
+- 还未实现监控等号
 
 - [ ] 参考资料
 
